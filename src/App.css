@@ -1,0 +1,27 @@
+global {
+	background-color: rgb(93, 209, 209);
+}
+
+h1 {
+	font-size: medium;
+}
+
+#cup img {
+	width: 5vw;
+	height: 5vh;
+}
+
+#cup button {
+	width: 6vw;
+	height: 6vh;
+	background-color: rgb(215, 255, 237);
+	/* border: none; */
+	box-shadow: 3px 3px 5px black;
+	border-radius: 100%;
+}
+
+#cup button:hover {
+	background-color: rgb(242, 200, 158);
+}
+
+
