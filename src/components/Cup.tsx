@@ -26,7 +26,7 @@ export default function Cup() {
       			onChange={handleChange}
       			aria-label="Platform"
     		>
-				<Tooltip title='bleue' placement='top'>
+				<Tooltip title='bleu' placement='top'>
 					<ToggleButton value="blue"><img src={Bubbleblue}/></ToggleButton>
 				</Tooltip>
 				<Tooltip title='vert' placement='top'>

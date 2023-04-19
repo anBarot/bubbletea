@@ -31,7 +31,7 @@ export default function App() {
 					</Box>
 				</Box>
 				<Box id="selector">
-					<Stack spacing={10}>
+					<Stack spacing={10} id="selector-stack">
 						<AppStack name={"NOM"} component={<Name />}/>
 						<AppStack name={"GOBELET"} component={<Cup />}/>
 						<AppStack name={"THÉ"} component={<Tea />}/>

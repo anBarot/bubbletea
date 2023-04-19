@@ -2,9 +2,8 @@ import React from 'react'
 import ToggleButton from '@mui/material/ToggleButton'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 import Tooltip from '@mui/material/Tooltip'
-import Bubbleblue from '../images/bubbletea_blue.png'
-import Bubblegreen from '../images/bubbletea_green.png'
-import Bubblefuschia from '../images/bubbletea_fuschia.png'
+import Blacktea from '../images/blacktea.png'
+import Greentea from '../images/greentea.png'
 
 export default function Tea() {
 	const [view, setView] = React.useState('list');
@@ -26,14 +25,11 @@ export default function Tea() {
       			onChange={handleChange}
       			aria-label="Platform"
     		>
-				<Tooltip title='bleue' placement='top'>
-					<ToggleButton value="blue"><img src={Bubbleblue}/></ToggleButton>
+				<Tooltip title='thé noir' placement='top'>
+					<ToggleButton value="black"><img src={Blacktea}/></ToggleButton>
 				</Tooltip>
-				<Tooltip title='vert' placement='top'>
-					<ToggleButton value="green"><img src={Bubblegreen}/></ToggleButton>
-				</Tooltip>
-				<Tooltip title='fuschia' placement='top'>
-					<ToggleButton value="fuschia"><img src={Bubblefuschia}/></ToggleButton>
+				<Tooltip title='thé vert' placement='top'>
+					<ToggleButton value="green"><img src={Greentea}/></ToggleButton>
 				</Tooltip>
 			</ToggleButtonGroup>
 		</div>
