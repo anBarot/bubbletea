@@ -1,27 +1,50 @@
 global {
-	background-color: rgb(93, 209, 209);
 }
 
 h1 {
 	font-size: medium;
 }
 
-#cup img {
-	width: 5vw;
-	height: 5vh;
+#app-box {
+	height: 80vh;
+
+	border: 3px solid black;
+	margin: 5%;
 }
 
-#cup button {
-	width: 6vw;
-	height: 6vh;
-	background-color: rgb(215, 255, 237);
-	/* border: none; */
-	box-shadow: 3px 3px 5px black;
-	border-radius: 100%;
+#svg-selector {
+	display: flex;
+	justify-content: center;
+
+	padding: 10px;
 }
 
-#cup button:hover {
-	background-color: rgb(242, 200, 158);
+#selector {
+	width: 35vw;
+
+	text-transform: uppercase;
+	
+	border: 3px solid black;
+	padding: 50px;
+	padding-top: 5vh;
 }
 
+#svg {
+	width: 65vw;
+	height: 75vh; 
+	
+	border: 3px solid black;
+}
 
+#cup, #jelly {
+	background-color: rgb(208, 245, 255);
+}
+
+#cup img, #jelly img {
+	width: 3vw;
+	height: 3vh;
+}
+
+#slider {
+	width: 40%;
+}

@@ -1,12 +1,14 @@
 import React from 'react'
 import ToggleButton from '@mui/material/ToggleButton'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
+import Box from '@mui/material/Box'
 import Tooltip from '@mui/material/Tooltip'
-import Bubbleblue from '../images/bubbletea_blue.png'
-import Bubblegreen from '../images/bubbletea_green.png'
-import Bubblefuschia from '../images/bubbletea_fuschia.png'
+import Tapioca from '../images/tapioca.png'
+import Redbean from '../images/redbean.png'
+import Natadecoco from '../images/natadecoco.png'
 
-export default function Cup() {
+
+export default function Gelée() {
 	const [view, setView] = React.useState('list');
 	const [alignment, setAlignment] = React.useState('web');
 
@@ -18,7 +20,7 @@ export default function Cup() {
 	};
 
 	return (
-		<div id="cup">
+		<div id="jelly">
 			<ToggleButtonGroup
       			color="primary"
       			value={alignment}
@@ -26,16 +28,16 @@ export default function Cup() {
       			onChange={handleChange}
       			aria-label="Platform"
     		>
-				<Tooltip title='bleue' placement='top'>
-					<ToggleButton value="blue"><img src={Bubbleblue}/></ToggleButton>
+				<Tooltip placement='top' title='tapioca'>
+					<ToggleButton value="tapioca"><img src={Tapioca}/></ToggleButton>
 				</Tooltip>
-				<Tooltip title='vert' placement='top'>
-					<ToggleButton value="green"><img src={Bubblegreen}/></ToggleButton>
+				<Tooltip placement='top' title='haricot rouge'>
+					<ToggleButton value="redbean"><img src={Redbean}/></ToggleButton>
 				</Tooltip>
-				<Tooltip title='fuschia' placement='top'>
-					<ToggleButton value="fuschia"><img src={Bubblefuschia}/></ToggleButton>
+				<Tooltip placement='top' title='coco'>
+					<ToggleButton value="natadecoco"><img src={Natadecoco}/></ToggleButton>
 				</Tooltip>
 			</ToggleButtonGroup>
 		</div>
-  );
+	);
 }

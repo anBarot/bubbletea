@@ -1,8 +1,9 @@
 import React from 'react';
+import TextField from '@mui/material/TextField';
 
 export default function Name() {
 
 	return (
-		<h1>Name component</h1>
+		<TextField id="textfield" label="Tu peux choisir un nom !" variant="outlined" />
 	);
 }

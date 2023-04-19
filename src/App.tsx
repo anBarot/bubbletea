@@ -5,33 +5,41 @@ import Box from '@mui/material/Box'
 import Grid2 from '@mui/material/Unstable_Grid2'
 import Cup from "./components/Cup"
 import Name from "./components/Name"
-import Tapioca from "./components/Tapioca"
+import Gelée from "./components/Gelée"
 import Tea from "./components/Tea"
 import Size from "./components/Size"
 
+function AppStack(props: {name: string, component: any}) {
+
+	return (
+		<Stack direction="row" justifyContent={'space-between'}>
+			<h1>{props.name}</h1>{props.component}
+		</Stack>
+	); 
+
+}
 
 export default function App() {
 	
 	return (
-		<Box>
-    		<Grid2 container spacing={5}>
-				<Grid2 xs={6}>
-				</Grid2>
-				<Grid2 xs={2}>
-					<h1>NOM</h1> 
-					<h1>GOBELET</h1>
-					<h1>THÉ</h1>
-					<h1>TAPIOCA</h1>
-					<h1>TAILLE</h1>
-				</Grid2>
-				<Grid2 xs={2}>
-					< Name />
-					< Cup/>
-					< Tea/>
-					< Tapioca/>
-					< Size/>
-				</Grid2>
-    		</Grid2>
+		<Box id="app-box">
+			<Stack direction="row" id="svg-selector">
+				<Box id="svg">
+					<Box id="svg-up">
+					</Box>
+					<Box id="svg-down">
+					</Box>
+				</Box>
+				<Box id="selector">
+					<Stack spacing={10}>
+						<AppStack name={"NOM"} component={<Name />}/>
+						<AppStack name={"GOBELET"} component={<Cup />}/>
+						<AppStack name={"THÉ"} component={<Tea />}/>
+						<AppStack name={"Gelée"} component={<Gelée />}/>
+						<AppStack name={"TAILLE"} component={<Size />}/>
+					</Stack>
+				</Box>
+			</Stack>
 		</Box>
 	);
 }
