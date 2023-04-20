@@ -1,15 +1,15 @@
 import './App.css';
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 import Cup from "./components/Cup"
 import Name from "./components/Name"
-import Gelée from "./components/Gelée"
+import Jelly from "./components/Jelly"
 import Tea from "./components/Tea"
 import Size from "./components/Size"
-import Bubbletea from './components/Bubbletea';
+import BubbleTea from './components/Bubbletea';
 
-function AppStack(props: {name: string, component: any}) {
+function AppStack(props: {name: string, component: JSX.Element}) {
 
 	return (
 		<Stack direction="row" justifyContent={'space-between'}>
@@ -20,6 +20,7 @@ function AppStack(props: {name: string, component: any}) {
 }
 
 export default function App() {
+	const [size, setSize] = useState<number>(5);
 
 	return (
 		<Box id="app-box">
@@ -27,7 +28,7 @@ export default function App() {
 				<Box id="bubbletea">
 					<Stack spacing={5}>
 						<h1>name</h1>
-						<Bubbletea />
+						<BubbleTea/>
 					</Stack>
 				</Box>
 				<Box id="selector">
@@ -35,7 +36,7 @@ export default function App() {
 						<AppStack name={"NOM"} component={<Name />}/>
 						<AppStack name={"GOBELET"} component={<Cup />}/>
 						<AppStack name={"THÉ"} component={<Tea />}/>
-						<AppStack name={"Gelée"} component={<Gelée />}/>
+						<AppStack name={"Gelée"} component={<Jelly />}/>
 						<AppStack name={"TAILLE"} component={<Size />}/>
 					</Stack>
 				</Box>
